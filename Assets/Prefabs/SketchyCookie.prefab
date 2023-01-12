@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2765557071797025023}
   - component: {fileID: 3663334808238094948}
   - component: {fileID: 1480616471470803271}
+  - component: {fileID: 8353780358155627358}
   m_Layer: 0
   m_Name: SketchyCookie
   m_TagString: Untagged
@@ -106,3 +107,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8353780358155627358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9222878049073030966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c01e055d40655c46a27b0ea4eb45ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class SpawnerManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject[] spawner;
+    int index;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        //spawning method
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            index = Random.Range(0,6);
+            spawner[index].GetComponent<CookieLauncher>().ShootCookie();
+        }
+
     }
 }
