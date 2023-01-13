@@ -41,6 +41,4 @@ public class MusicManager : MonoBehaviour {
         navStartPosition = nav.transform.position;
         navEndPosition = timeline.transform.position * 2;
     }
-
-    //void CookieTimeline[]{}
 }
