@@ -23,7 +23,7 @@ public class Blade : MonoBehaviour
         
         
         
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) )
         {
             StartCutting();
         }
