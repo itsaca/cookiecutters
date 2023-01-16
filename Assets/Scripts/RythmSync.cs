@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RythmSync : MonoBehaviour
 {
-    public GameObject[] beats;
+    public List<MusicBeat> beats;
     public SpawnerManager sm;
     public Transform nav;
     float currentPos;
@@ -12,9 +12,14 @@ public class RythmSync : MonoBehaviour
     int i;
     public float variation;
 
-    void FixedUpdate() {
+    private void Awake() {
+        CollectBeats();
+    }
+
+    void Update() {
+
         currentPos = nav.position.x;
-        if (i < beats.Length) {
+        if (i < beats.Count) {
             beatPos = beats[i].transform.position.x;
             CreateCookieTimeline();
             if (currentPos >= beatPos) {
@@ -29,4 +34,19 @@ public class RythmSync : MonoBehaviour
         beatPos -= variation;
     }
 
+    void CollectBeats() {
+        var beatarray = GetComponentsInChildren<MusicBeat>();
+        beats = new List<MusicBeat>(beatarray);
+        beats.Sort(CompareBeats);
+    }
+
+    int CompareBeats(MusicBeat a, MusicBeat b) {
+        var ax = a.transform.position.x;
+        var bx = b.transform.position.x;
+        if (ax < bx) return -1;
+        if (ax > bx) return 1;
+        return 0;
+
+
+    }
 }
