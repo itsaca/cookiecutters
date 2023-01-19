@@ -46,7 +46,7 @@ public class Blade : MonoBehaviour
             if (velocity > minSliceValue) 
             {
                 circleCollider2D.enabled = true;
-                Debug.Log("cutting now");
+                //Debug.Log("cutting now");
             }
         else
             { 

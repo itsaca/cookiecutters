@@ -9,7 +9,7 @@ public class cookiecutting : MonoBehaviour
     {
         if(col.tag == "blade")
         {
-            Debug.Log("cookie got cut!");
+            //Debug.Log("cookie got cut!");
             Destroy(gameObject);
         }
     }
