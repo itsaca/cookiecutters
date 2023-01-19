@@ -15,10 +15,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void AddScore() {
+    public void AddPoorScore() {
+        score += 50;
+        UpdateHighscore();
+    }
+
+    public void AddGoodScore() {
         score += 100;
         UpdateHighscore();
     }
+
+    public void AddPerfectScore() {
+        score += 200;
+        UpdateHighscore();
+    }
+
+
 
     void UpdateHighscore() {
 
@@ -41,6 +53,5 @@ public class GameManager : MonoBehaviour
 
         score = 0;
         storage.highscore = highscore;
-
     }
 }
