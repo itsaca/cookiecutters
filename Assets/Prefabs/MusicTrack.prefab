@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicTrackLenght: 20
-  musicON: 0
+  musicON: 1
 --- !u!1 &3240862315367824497
 GameObject:
   m_ObjectHideFlags: 0
