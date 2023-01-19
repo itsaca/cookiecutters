@@ -5,7 +5,7 @@ using UnityEngine;
 public class Blade : MonoBehaviour
 {
     public bool isCutting = false;
-    public float minSliceValue=.001f;
+    public float minSliceValue=.01f;
     Rigidbody2D rb;
     Camera cam;
     Vector2 previousPosition;
@@ -46,7 +46,9 @@ public class Blade : MonoBehaviour
             if (velocity > minSliceValue) 
             {
                 circleCollider2D.enabled = true;
-            }else
+                //Debug.Log("cutting now");
+            }
+        else
             { 
                 circleCollider2D.enabled = false;   
             }
@@ -57,7 +59,7 @@ public class Blade : MonoBehaviour
     {
         isCutting= true;
         currentbladtrail = Instantiate(bladtrail, transform);
-        previousPosition = cam.ScreenToWorldPoint(Input.mousePosition);
+        //previousPosition = cam.ScreenToWorldPoint(Input.mousePosition);
         circleCollider2D.enabled= false;
     }
 
