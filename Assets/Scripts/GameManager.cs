@@ -7,6 +7,14 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] int highscore;
     [SerializeField] int score;
+    Storage storage;
+
+    private void Start() {
+        if (FindObjectOfType<Storage>() != null) {
+            storage = FindObjectOfType<Storage>();
+            highscore = storage.highscore;
+        }
+    }
 
     void Update()
     {
@@ -15,10 +23,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void AddScore() {
+    public void AddPoorScore() {
+        score += 50;
+        UpdateHighscore();
+    }
+
+    public void AddGoodScore() {
         score += 100;
         UpdateHighscore();
     }
+
+    public void AddPerfectScore() {
+        score += 200;
+        UpdateHighscore();
+    }
+
+
 
     void UpdateHighscore() {
 
@@ -41,6 +61,5 @@ public class GameManager : MonoBehaviour
 
         score = 0;
         storage.highscore = highscore;
-
     }
 }

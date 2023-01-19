@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Cookie : MonoBehaviour
 {
-    public enum sweetspot {poor, good, perfect}
-    public sweetspot ss;
     public RythmSync rs;
     float cookieLifespan = 4;
 

@@ -30,8 +30,7 @@ public class RythmSync : MonoBehaviour
     }
 
     void CreateCookieTimeline() {
-        variation = Random.Range(0.3f, 1f);
-        beatPos -= variation;
+        beatPos -= 1f;
     }
 
     void CollectBeats() {
