@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Cookie : MonoBehaviour
 {
-    public RythmSync rs;
     float cookieLifespan = 4;
 
     void Start()
