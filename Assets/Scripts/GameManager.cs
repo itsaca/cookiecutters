@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void UpdateText() {
-        scoreText.text = "" + score;       
+        //scoreText.text = "" + score;       
     }
 
     public void AddPoorScore() {
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         if (score > highscore) {
             highscore = score;
         }
-        highText.text = "" + highscore;
+        //highText.text = "" + highscore;
     }
 
     public void ResetScene() {
