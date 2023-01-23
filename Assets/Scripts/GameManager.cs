@@ -2,18 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] int highscore;
     [SerializeField] int score;
     Storage storage;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI highText;
 
     private void Start() {
         if (FindObjectOfType<Storage>() != null) {
             storage = FindObjectOfType<Storage>();
             highscore = storage.highscore;
         }
+        UpdateHighscore();
     }
 
     void Update()
@@ -23,29 +27,34 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void UpdateText() {
+        scoreText.text = "" + score;       
+    }
+
     public void AddPoorScore() {
         score += 50;
         UpdateHighscore();
+        UpdateText();
     }
 
     public void AddGoodScore() {
         score += 100;
         UpdateHighscore();
+        UpdateText();
     }
 
     public void AddPerfectScore() {
         score += 200;
         UpdateHighscore();
+        UpdateText();
     }
-
-
 
     void UpdateHighscore() {
 
         if (score > highscore) {
             highscore = score;
         }
-
+        highText.text = "" + highscore;
     }
 
     public void ResetScene() {
