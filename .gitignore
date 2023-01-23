@@ -6,7 +6,9 @@
 /[Ll]ogs/
 /[Uu]serSettings/
 /Assets/AssetStoreTools*
-
+/app/
+/app_BurstDebugInformation_DoNotShip/
+/gude-2023-01-19/
 # Visual Studio 2015 cache/options directory
 .vs/
 
