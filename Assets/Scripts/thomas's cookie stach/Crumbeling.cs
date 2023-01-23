@@ -9,11 +9,13 @@ public class Crumbeling : MonoBehaviour
     public bool destroyGameObject = false;
 
     SpriteRenderer spriteRenderer;
+    
 
     void Start()
     {
         spriteRenderer= GetComponent<SpriteRenderer>();
         StartCoroutine(FadeTo(alphaValue,fadeDelay));
+        
 
     }
 
@@ -25,6 +27,7 @@ public class Crumbeling : MonoBehaviour
         {
             Color newColor =new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, Mathf.Lerp(alpha, aValue, t));
             spriteRenderer.color = newColor;
+            
             yield return null;
         }
 

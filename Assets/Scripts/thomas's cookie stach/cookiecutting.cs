@@ -36,10 +36,12 @@ public class cookiecutting : MonoBehaviour
 
             if (ss == sweetspot.good) {
                 gm.AddGoodScore();
+
             }
 
             if (ss == sweetspot.perfect) {
                 gm.AddPerfectScore();
+
             }
 
             Instantiate(pieces, transform.position, Quaternion.identity);
