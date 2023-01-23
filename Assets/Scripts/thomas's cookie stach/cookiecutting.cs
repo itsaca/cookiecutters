@@ -42,7 +42,6 @@ public class cookiecutting : MonoBehaviour
                 gm.AddPerfectScore();
             }
 
-            //Debug.Log("cookie got cut!");
             Instantiate(pieces, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
