@@ -372,6 +372,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2501669769975380861, guid: c742ba65edfad094ba1f4bb2ebca7118, type: 3}
   m_PrefabInstance: {fileID: 2501669770007861850}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &38527534 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 30834255198826168, guid: adcd29a41dc57e942b9977859b72e250, type: 3}
+  m_PrefabInstance: {fileID: 1692383645}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &52223328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7765550463202240583, guid: e3f53c94c40028f4ba3291d6ca185ddc, type: 3}
@@ -8199,6 +8210,7 @@ MonoBehaviour:
   score: 0
   scoreText: {fileID: 1692383647}
   highText: {fileID: 1692383646}
+  Combo: {fileID: 38527534}
   killsound: {fileID: 1950421613}
   perfkillsound: {fileID: 1950421614}
   comboNumber: 3
