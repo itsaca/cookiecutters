@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class MusicBeat : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [Range(0, 5)] public int index;
+
 }
