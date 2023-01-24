@@ -23,8 +23,9 @@ public class RythmSync : MonoBehaviour
             beatPos = beats[i].transform.position.x;
             CreateCookieTimeline();
             if (currentPos >= beatPos) {
+                var index = beats[i].gameObject.GetComponent<MusicBeat>().index;
                 i++;
-                sm.SpawnCookie();
+                sm.SpawnCookie(index);
             }
         } return;
     }
@@ -45,7 +46,5 @@ public class RythmSync : MonoBehaviour
         if (ax < bx) return -1;
         if (ax > bx) return 1;
         return 0;
-
-
     }
 }
