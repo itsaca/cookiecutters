@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     Storage storage;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI highText;
+    [SerializeField] private TextMeshProUGUI Combo;
     public AudioSource killsound;
     public AudioSource perfkillsound;
     public int comboNumber = 3;
@@ -100,7 +101,7 @@ public class GameManager : MonoBehaviour
             currentcombo= 0;
             
         }
-        
+        Combo.text = "Combo:" + currentcombo;
     }
 
 }
