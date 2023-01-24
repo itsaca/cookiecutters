@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     public int comboNumber = 3;
     public int currentcombo=0;
     public GameObject combogif;
+    [SerializeField] int poor;
+    [SerializeField] int good;
+    [SerializeField] int perfect;
 
     private void Start() {
         if (FindObjectOfType<Storage>() != null) {
@@ -39,18 +42,21 @@ public class GameManager : MonoBehaviour
 
     public void AddPoorScore() {
         score += 50;
+        poor += 1;
         UpdateHighscore();
         UpdateText();
     }
 
     public void AddGoodScore() {
         score += 100;
+        good += 1;
         UpdateHighscore();
         UpdateText();
     }
 
     public void AddPerfectScore() {
         score += 200;
+        perfect += 1;
         UpdateHighscore();
         UpdateText();
     }
@@ -103,5 +109,6 @@ public class GameManager : MonoBehaviour
         }
         Combo.text = "Combo:" + currentcombo;
     }
+
 
 }
