@@ -24,11 +24,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] int good;
     [SerializeField] int perfect;
     public TextMeshProUGUI completed;
-    public Image star1;
-    public Image star2;
-    public Image star3;
+    public Image scorestars;
     public TextMeshProUGUI purfectprocent;
     public float purffection;
+    public float cookiesthrown = 0.0f;
 
     private void Start() {
         if (FindObjectOfType<Storage>() != null) {
@@ -36,6 +35,7 @@ public class GameManager : MonoBehaviour
             highscore = storage.highscore;
         }
         UpdateHighscore();
+        Levelend();
     }
 
     void Update()
@@ -121,21 +121,18 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void LevelCompleted() {
-        purffection += perfect/(poor + good + perfect);
-        completed.enabled = true;
-        purfectprocent.enabled = true;
-        if (purffection >= 0.2f) {
-            star1.enabled = true;
-        }
+    public void cookiesshot(float x)
+    {
+        cookiesthrown += x;
+    }
+    public void Levelend()
+    {
+        float x = 0.0f;
+        x = (perfect + good / 1.5f + poor / 2.0f) / cookiesthrown;
+        scorestars.enabled= true;
+        scorestars.fillAmount= x;
+        
 
-        if (purffection >= 0.6f){
-            star2.enabled = true;
-        }
-
-        if (purffection >= 0.8f) {
-            star3.enabled = true;
-        }
 
     }
 

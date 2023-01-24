@@ -13,12 +13,12 @@ public class MusicManager : MonoBehaviour {
     float elapsedTime;
 
     GameManager gm;
-    float percentageComplete;
+    public float percentageComplete = 0;
 
     void Start() {
         timeline = gameObject.transform.Find("Timeline");
         nav = gameObject.transform.Find("Nav");
-        gm = GameObject.Find("GameManager1").GetComponent<GameManager>();
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         PrepareTimeline();
     }
 
@@ -34,7 +34,7 @@ public class MusicManager : MonoBehaviour {
         }
 
         if (percentageComplete >= 1) {
-            gm.LevelCompleted();
+            gm.Levelend();
         }
 
     }

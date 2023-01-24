@@ -314,6 +314,10 @@ PrefabInstance:
       propertyPath: sm
       value: 
       objectReference: {fileID: 913194809}
+    - target: {fileID: 1973098455092681677, guid: ceafdae78dfb7194f82a532234c3ac9d, type: 3}
+      propertyPath: beats.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1973098455791112216, guid: ceafdae78dfb7194f82a532234c3ac9d, type: 3}
       propertyPath: m_Name
       value: Tetris
@@ -805,6 +809,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1447218641 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2234508489885666029, guid: adcd29a41dc57e942b9977859b72e250, type: 3}
+  m_PrefabInstance: {fileID: 1692383645}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1612693742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1130,6 +1145,10 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1692383647}
+    - target: {fileID: 1007693367668912753, guid: 633853d3187cb84408fdef1e11ba7065, type: 3}
+      propertyPath: scorestars
+      value: 
+      objectReference: {fileID: 1447218641}
     - target: {fileID: 1007693367668912758, guid: 633853d3187cb84408fdef1e11ba7065, type: 3}
       propertyPath: m_RootOrder
       value: 3
