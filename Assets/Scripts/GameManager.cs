@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour
     Storage storage;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI highText;
+    public AudioSource killsound;
+    public AudioSource perfkillsound;
+    public int comboNumber = 3;
+    public int currentcombo=0;
+    public GameObject combogif;
 
     private void Start() {
         if (FindObjectOfType<Storage>() != null) {
@@ -71,4 +76,31 @@ public class GameManager : MonoBehaviour
         score = 0;
         storage.highscore = highscore;
     }
+
+    public void cookieslashing(float a)
+    {
+        if (a == 1.0f) 
+        {
+            killsound.Play();
+        }
+        if (a== 2.0f)
+        {
+            perfkillsound.Play();
+        }
+
+
+    }
+
+    public void combo()
+    {
+        currentcombo += 1;
+        if (currentcombo == comboNumber) 
+        {
+            Instantiate(combogif);
+            currentcombo= 0;
+            
+        }
+        
+    }
+
 }

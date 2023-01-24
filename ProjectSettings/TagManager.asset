@@ -42,6 +42,12 @@ TagManager:
   - name: background layer
     uniqueID: 271110299
     locked: 0
+  - name: midle layer
+    uniqueID: 2746297207
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: forground
+    uniqueID: 1968154131
     locked: 0
