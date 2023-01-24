@@ -706,6 +706,10 @@ PrefabInstance:
       propertyPath: index
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8488478280758765736, guid: ceafdae78dfb7194f82a532234c3ac9d, type: 3}
+      propertyPath: index
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6222523923764324458, guid: ceafdae78dfb7194f82a532234c3ac9d, type: 3}
@@ -1166,10 +1170,22 @@ PrefabInstance:
       propertyPath: cookie
       value: 
       objectReference: {fileID: 7806979935067129867, guid: a935eec246e645d46a2c24c887993dc8, type: 3}
+    - target: {fileID: 6558580168225484026, guid: b608f360c5992044ea16d49dc6762014, type: 3}
+      propertyPath: highForce
+      value: 700
+      objectReference: {fileID: 0}
     - target: {fileID: 6558580168645064147, guid: b608f360c5992044ea16d49dc6762014, type: 3}
       propertyPath: cookie
       value: 
       objectReference: {fileID: 7806979935067129867, guid: a935eec246e645d46a2c24c887993dc8, type: 3}
+    - target: {fileID: 6558580168645064147, guid: b608f360c5992044ea16d49dc6762014, type: 3}
+      propertyPath: lowForce
+      value: 550
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558580168645064147, guid: b608f360c5992044ea16d49dc6762014, type: 3}
+      propertyPath: highForce
+      value: 700
+      objectReference: {fileID: 0}
     - target: {fileID: 6558580168645064157, guid: b608f360c5992044ea16d49dc6762014, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -1178,6 +1194,18 @@ PrefabInstance:
       propertyPath: cookie
       value: 
       objectReference: {fileID: 7806979935067129867, guid: a935eec246e645d46a2c24c887993dc8, type: 3}
+    - target: {fileID: 6558580169054051404, guid: b608f360c5992044ea16d49dc6762014, type: 3}
+      propertyPath: lowForce
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558580169054051404, guid: b608f360c5992044ea16d49dc6762014, type: 3}
+      propertyPath: highForce
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558580169054051404, guid: b608f360c5992044ea16d49dc6762014, type: 3}
+      propertyPath: direction.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6558580169054051406, guid: b608f360c5992044ea16d49dc6762014, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -1186,6 +1214,10 @@ PrefabInstance:
       propertyPath: cookie
       value: 
       objectReference: {fileID: 7806979935067129867, guid: a935eec246e645d46a2c24c887993dc8, type: 3}
+    - target: {fileID: 6558580169129117400, guid: b608f360c5992044ea16d49dc6762014, type: 3}
+      propertyPath: highForce
+      value: 700
+      objectReference: {fileID: 0}
     - target: {fileID: 6558580169129117402, guid: b608f360c5992044ea16d49dc6762014, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -1246,6 +1278,14 @@ PrefabInstance:
       propertyPath: cookie
       value: 
       objectReference: {fileID: 7806979935067129867, guid: a935eec246e645d46a2c24c887993dc8, type: 3}
+    - target: {fileID: 6558580169262017256, guid: b608f360c5992044ea16d49dc6762014, type: 3}
+      propertyPath: lowForce
+      value: 550
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558580169262017256, guid: b608f360c5992044ea16d49dc6762014, type: 3}
+      propertyPath: highForce
+      value: 700
+      objectReference: {fileID: 0}
     - target: {fileID: 6558580169262017258, guid: b608f360c5992044ea16d49dc6762014, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -1254,6 +1294,10 @@ PrefabInstance:
       propertyPath: cookie
       value: 
       objectReference: {fileID: 7806979935067129867, guid: a935eec246e645d46a2c24c887993dc8, type: 3}
+    - target: {fileID: 6558580169399590762, guid: b608f360c5992044ea16d49dc6762014, type: 3}
+      propertyPath: highForce
+      value: 700
+      objectReference: {fileID: 0}
     - target: {fileID: 6558580169399590772, guid: b608f360c5992044ea16d49dc6762014, type: 3}
       propertyPath: m_Layer
       value: 0

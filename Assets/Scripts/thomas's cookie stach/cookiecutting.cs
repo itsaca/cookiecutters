@@ -32,15 +32,19 @@ public class cookiecutting : MonoBehaviour
         {
             if (ss == sweetspot.poor) {
                 gm.AddPoorScore();
+                gm.cookieslashing(1);
             }
 
             if (ss == sweetspot.good) {
                 gm.AddGoodScore();
+                gm.cookieslashing(1);
 
             }
 
             if (ss == sweetspot.perfect) {
                 gm.AddPerfectScore();
+                gm.cookieslashing(2);
+                gm.combo();
 
             }
 

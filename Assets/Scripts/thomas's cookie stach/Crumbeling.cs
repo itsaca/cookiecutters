@@ -35,10 +35,6 @@ public class Crumbeling : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-
-
-
     }
 
 
