@@ -8,6 +8,7 @@ public class cookiecutting : MonoBehaviour
     public sweetspot ss;
     float cookieGoodness = -1f;
     GameManager gm;
+    public GameObject pieces;
 
     private void Start() {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -35,13 +36,15 @@ public class cookiecutting : MonoBehaviour
 
             if (ss == sweetspot.good) {
                 gm.AddGoodScore();
+
             }
 
             if (ss == sweetspot.perfect) {
                 gm.AddPerfectScore();
+
             }
 
-            //Debug.Log("cookie got cut!");
+            Instantiate(pieces, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
