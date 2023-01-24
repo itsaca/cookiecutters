@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI Combo;
     public AudioSource killsound;
     public AudioSource perfkillsound;
+    public AudioSource meow;
     public int comboNumber = 3;
     public int currentcombo=0;
     public GameObject combogif;
@@ -104,6 +105,7 @@ public class GameManager : MonoBehaviour
         if (currentcombo == comboNumber) 
         {
             Instantiate(combogif);
+            meow.Play();
             currentcombo= 0;
             
         }
