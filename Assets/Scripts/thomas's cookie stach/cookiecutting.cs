@@ -11,7 +11,7 @@ public class cookiecutting : MonoBehaviour
     public GameObject pieces;
 
     private void Start() {
-        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gm = GameObject.Find("GameManager1").GetComponent<GameManager>();
     }
     private void Update() {
         cookieGoodness += Time.deltaTime;

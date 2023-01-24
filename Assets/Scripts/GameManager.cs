@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI highText;
     [SerializeField] private TextMeshProUGUI Combo;
+    [SerializeField] private TextMeshProUGUI levelCompleted;
     public AudioSource killsound;
     public AudioSource perfkillsound;
     public int comboNumber = 3;
@@ -20,6 +22,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] int poor;
     [SerializeField] int good;
     [SerializeField] int perfect;
+    public TextMeshProUGUI completed;
+    public Image star1;
+    public Image star2;
+    public Image star3;
+    public TextMeshProUGUI purfectprocent;
+    public float purffection;
 
     private void Start() {
         if (FindObjectOfType<Storage>() != null) {
@@ -110,5 +118,23 @@ public class GameManager : MonoBehaviour
         Combo.text = "Combo:" + currentcombo;
     }
 
+
+    public void LevelCompleted() {
+        purffection += perfect/(poor + good + perfect);
+        completed.enabled = true;
+        purfectprocent.enabled = true;
+        if (purffection >= 0.2f) {
+            star1.enabled = true;
+        }
+
+        if (purffection >= 0.6f){
+            star2.enabled = true;
+        }
+
+        if (purffection >= 0.8f) {
+            star3.enabled = true;
+        }
+
+    }
 
 }
