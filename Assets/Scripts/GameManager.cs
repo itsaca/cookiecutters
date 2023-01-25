@@ -23,10 +23,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] int poor;
     [SerializeField] int good;
     [SerializeField] int perfect;
-    public TextMeshProUGUI completed;
     public Image scorestars;
-    public TextMeshProUGUI purfectprocent;
-    public float purffection;
     public float cookiesthrown = 0.0f;
     public int health = 5;
 
