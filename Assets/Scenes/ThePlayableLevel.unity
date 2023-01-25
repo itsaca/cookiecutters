@@ -660,7 +660,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1692383645}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -768,11 +768,15 @@ PrefabInstance:
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 2234508489885666029, guid: adcd29a41dc57e942b9977859b72e250, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313609343606160104, guid: adcd29a41dc57e942b9977859b72e250, type: 3}
       propertyPath: m_Name
       value: score(in%)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313609343606160104, guid: adcd29a41dc57e942b9977859b72e250, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4147474949393478867, guid: adcd29a41dc57e942b9977859b72e250, type: 3}
       propertyPath: m_fontAsset
