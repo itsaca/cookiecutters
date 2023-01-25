@@ -539,6 +539,7 @@ MonoBehaviour:
   purfectprocent: {fileID: 0}
   purffection: 0
   cookiesthrown: 0
+  health: 5
 --- !u!4 &1365788030
 Transform:
   m_ObjectHideFlags: 0
@@ -719,7 +720,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1295254466}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3408351963609620522, guid: b70eba72b00ac5c4da922affe8b865b9, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b70eba72b00ac5c4da922affe8b865b9, type: 3}
