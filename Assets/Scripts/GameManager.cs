@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI purfectprocent;
     public float purffection;
     public float cookiesthrown = 0.0f;
+    public int health = 5;
 
     private void Start() {
         if (FindObjectOfType<Storage>() != null) {
@@ -115,6 +116,7 @@ public class GameManager : MonoBehaviour
             Instantiate(combogif);
             meow.Play();
             currentcombo= 0;
+            health += 1;
             
         }
         Combo.text = "Combo:" + currentcombo;
@@ -136,4 +138,19 @@ public class GameManager : MonoBehaviour
 
     }
 
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag== "Cookie")
+        {
+            health -= 1;
+            if (health <=0) 
+            {
+                GameOver();
+            }
+        }
+    }
+    void GameOver() 
+    {
+        
+    }
 }
