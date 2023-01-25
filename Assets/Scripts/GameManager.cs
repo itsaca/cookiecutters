@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Video;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,7 +21,7 @@ public class GameManager : MonoBehaviour
     public AudioSource meow;
     public int comboNumber = 3;
     public int currentcombo=0;
-    public GameObject combogif;
+    public VideoPlayer combogif;
     [SerializeField] int poor;
     [SerializeField] int good;
     [SerializeField] int perfect;
@@ -110,7 +112,7 @@ public class GameManager : MonoBehaviour
         currentcombo += 1;
         if (currentcombo == comboNumber) 
         {
-            Instantiate(combogif);
+            combogif.Play();
             meow.Play();
             currentcombo= 0;
             health += 1;
@@ -128,8 +130,8 @@ public class GameManager : MonoBehaviour
     {
         float x = 0.0f;
         x = (perfect + good / 1.5f + poor / 2.0f) / cookiesthrown;
-        scorestars.enabled= true;
-        scorestars.fillAmount= x;
+        //scorestars.enabled= true;
+        //scorestars.fillAmount= x;
         
 
 
