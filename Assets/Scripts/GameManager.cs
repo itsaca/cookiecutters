@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI highText;
     [SerializeField] private TextMeshProUGUI Combo;
-    [SerializeField] private TextMeshProUGUI levelCompleted;
     public AudioSource killsound;
     public AudioSource perfkillsound;
     public AudioSource meow;
@@ -26,8 +25,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] int poor;
     [SerializeField] int good;
     [SerializeField] int perfect;
-    public Image scorestars;
     public GameObject gameover;
+    public GameObject winning;
+    public GameObject pausebutton;
+    public Image starScore;
+    public TextMeshProUGUI Textscore;
     public float cookiesthrown = 0.0f;
     public int health = 5;
 
@@ -138,8 +140,14 @@ public class GameManager : MonoBehaviour
     {
         float x = 0.0f;
         x = (perfect + good / 1.5f + poor / 2.0f) / cookiesthrown;
-        //scorestars.enabled= true;
-        //scorestars.fillAmount= x;
+        winning.SetActive(true);
+        starScore.fillAmount= x;
+        x = x * 100;
+        int y = (int)x;
+        Textscore.text= "Youscored :" + y + "%";
+        pausebutton.SetActive(false);
+
+      
         
 
 

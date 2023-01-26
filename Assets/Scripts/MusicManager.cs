@@ -28,7 +28,8 @@ public class MusicManager : MonoBehaviour {
     void Update() {
       
 
-        if (musicON) {
+        if (musicON) 
+        {
             elapsedTime += Time.deltaTime;
             percentageComplete = elapsedTime / musicTrackLenght;
             nav.transform.position = Vector3.Lerp(navStartPosition, navEndPosition, percentageComplete);
