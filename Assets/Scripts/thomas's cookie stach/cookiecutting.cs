@@ -44,7 +44,7 @@ public class cookiecutting : MonoBehaviour
             if (ss == sweetspot.perfect) {
                 gm.AddPerfectScore();
                 gm.cookieslashing(2);
-                gm.combo();
+                //gm.combo();
 
             }
 
