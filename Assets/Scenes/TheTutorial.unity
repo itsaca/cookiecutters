@@ -941,6 +941,14 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 9022128c49b75c14bb952624cff3cdbb, type: 3}
+    - target: {fileID: 8481034122400155077, guid: 633853d3187cb84408fdef1e11ba7065, type: 3}
+      propertyPath: m_Size.y
+      value: 0.70832634
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481034122400155077, guid: 633853d3187cb84408fdef1e11ba7065, type: 3}
+      propertyPath: m_Offset.y
+      value: -12.077725
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
