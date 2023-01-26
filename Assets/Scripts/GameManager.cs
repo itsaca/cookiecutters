@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
         currentcombo += 1;
         if (currentcombo == comboNumber) 
         {
-            //combogif.Play();
+            combogif.Play();
             meow.Play();
             currentcombo= 0;
             health += 1;
