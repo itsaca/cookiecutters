@@ -12,7 +12,7 @@ public class MusicManager : MonoBehaviour {
     Vector3 navStartPosition;
     float elapsedTime;
 
-    AudioSource music;
+    public AudioSource music;
     GameManager gm;
     public float percentageComplete = 0;
 
@@ -22,12 +22,11 @@ public class MusicManager : MonoBehaviour {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         PrepareTimeline();
         music = GetComponent<AudioSource>();
+        StartMusic();
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.E)) {
-            StartMusic();
-        }
+      
 
         if (musicON) {
             elapsedTime += Time.deltaTime;

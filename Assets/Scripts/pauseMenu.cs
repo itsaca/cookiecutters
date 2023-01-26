@@ -6,15 +6,22 @@ using UnityEngine.SceneManagement;
 public class pauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pausemenu;
+    GameManager gm;
     // Start is called before the first frame update
+    public void Start()
+    {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
     public void Pause()
     {
         pausemenu.SetActive(true);
+        gm.music.Pause();
         Time.timeScale = 0.0f;
     }
     public void Resume()
     {
         pausemenu.SetActive(false);
+        gm.music.UnPause();
         Time.timeScale = 1.0f;
     }
     public void Quite()

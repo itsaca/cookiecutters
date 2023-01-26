@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public AudioSource killsound;
     public AudioSource perfkillsound;
     public AudioSource meow;
+    public AudioSource levelsong;
     public int comboNumber = 3;
     public int currentcombo=0;
     public VideoPlayer combogif;
@@ -26,16 +27,24 @@ public class GameManager : MonoBehaviour
     [SerializeField] int good;
     [SerializeField] int perfect;
     public Image scorestars;
+    public GameObject gameover;
     public float cookiesthrown = 0.0f;
     public int health = 5;
+    MusicManager music;
 
-    private void Start() {
+    public void Awake()
+    {
+        music = GetComponent<MusicManager>();
+    }
+
+    public void Start() {
         if (FindObjectOfType<Storage>() != null) {
             storage = FindObjectOfType<Storage>();
             highscore = storage.highscore;
         }
         UpdateHighscore();
-        Levelend();
+        levelsong.Play();
+        
     }
 
     void Update()
@@ -150,6 +159,9 @@ public class GameManager : MonoBehaviour
     }
     void GameOver() 
     {
-        
+        gameover.SetActive(true);
+        music.music.Pause();
+        Time.timeScale = 0.0f;
+
     }
 }
