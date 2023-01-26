@@ -22,7 +22,7 @@ public class MusicManager : MonoBehaviour {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         PrepareTimeline();
         music = GetComponent<AudioSource>();
-        StartMusic();
+        
     }
 
     void Update() {
@@ -40,10 +40,6 @@ public class MusicManager : MonoBehaviour {
 
     }
 
-    void StartMusic() {
-        musicON = true;
-        music.Play();
-    }
 
     void PrepareTimeline() {
         timeline.transform.localScale += new Vector3(musicTrackLenght, 0, 0);

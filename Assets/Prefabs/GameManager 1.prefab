@@ -60,6 +60,7 @@ MonoBehaviour:
   killsound: {fileID: 1007693367668912759}
   perfkillsound: {fileID: 1007693367668912756}
   meow: {fileID: 7851269358806834638}
+  levelsong: {fileID: 0}
   comboNumber: 3
   currentcombo: 0
   combogif: {fileID: 6611450457103480034}
@@ -67,8 +68,9 @@ MonoBehaviour:
   good: 0
   perfect: 0
   scorestars: {fileID: 0}
+  gameover: {fileID: 0}
   cookiesthrown: 0
-  health: 5
+  health: 6
 --- !u!61 &8481034122400155077
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -544,8 +546,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 9022128c49b75c14bb952624cff3cdbb, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

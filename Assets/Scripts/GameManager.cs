@@ -30,11 +30,10 @@ public class GameManager : MonoBehaviour
     public GameObject gameover;
     public float cookiesthrown = 0.0f;
     public int health = 5;
-    MusicManager music;
 
     public void Awake()
     {
-        music = GetComponent<MusicManager>();
+
     }
 
     public void Start() {
@@ -160,7 +159,7 @@ public class GameManager : MonoBehaviour
     void GameOver() 
     {
         gameover.SetActive(true);
-        music.music.Pause();
+        levelsong.Pause();
         Time.timeScale = 0.0f;
 
     }

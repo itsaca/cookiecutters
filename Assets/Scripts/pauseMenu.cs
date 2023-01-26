@@ -15,13 +15,13 @@ public class pauseMenu : MonoBehaviour
     public void Pause()
     {
         pausemenu.SetActive(true);
-        gm.music.Pause();
+        gm.levelsong.Pause();
         Time.timeScale = 0.0f;
     }
     public void Resume()
     {
         pausemenu.SetActive(false);
-        gm.music.UnPause();
+        gm.levelsong.UnPause();
         Time.timeScale = 1.0f;
     }
     public void Quite()

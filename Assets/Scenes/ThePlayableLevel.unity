@@ -336,6 +336,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 44.945152, y: 0.9395447}
   m_EdgeRadius: 0
+--- !u!82 &355812915 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 124263837374408731, guid: 633853d3187cb84408fdef1e11ba7065, type: 3}
+  m_PrefabInstance: {fileID: 1007693366255493146}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &355812918 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1007693367668912756, guid: 633853d3187cb84408fdef1e11ba7065, type: 3}
+  m_PrefabInstance: {fileID: 1007693366255493146}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &473491747 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2008235619335758744, guid: adcd29a41dc57e942b9977859b72e250, type: 3}
@@ -940,6 +950,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1692383646}
     - target: {fileID: 1007693367668912753, guid: 633853d3187cb84408fdef1e11ba7065, type: 3}
+      propertyPath: killsound
+      value: 
+      objectReference: {fileID: 355812918}
+    - target: {fileID: 1007693367668912753, guid: 633853d3187cb84408fdef1e11ba7065, type: 3}
+      propertyPath: levelsong
+      value: 
+      objectReference: {fileID: 355812915}
+    - target: {fileID: 1007693367668912753, guid: 633853d3187cb84408fdef1e11ba7065, type: 3}
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1692383647}
@@ -950,7 +968,7 @@ PrefabInstance:
     - target: {fileID: 1007693367668912756, guid: 633853d3187cb84408fdef1e11ba7065, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 51c20818b778fb94aa7dbf2f3078e574, type: 3}
+      objectReference: {fileID: 8300000, guid: b1b4a0a765283d545befdabeacfff4ff, type: 3}
     - target: {fileID: 1007693367668912758, guid: 633853d3187cb84408fdef1e11ba7065, type: 3}
       propertyPath: m_RootOrder
       value: 3
