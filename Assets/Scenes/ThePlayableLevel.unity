@@ -401,7 +401,8 @@ PrefabInstance:
       propertyPath: sm
       value: 
       objectReference: {fileID: 913194809}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5947224445361815026, guid: b70eba72b00ac5c4da922affe8b865b9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -946,6 +947,10 @@ PrefabInstance:
       propertyPath: scorestars
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1007693367668912756, guid: 633853d3187cb84408fdef1e11ba7065, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 51c20818b778fb94aa7dbf2f3078e574, type: 3}
     - target: {fileID: 1007693367668912758, guid: 633853d3187cb84408fdef1e11ba7065, type: 3}
       propertyPath: m_RootOrder
       value: 3

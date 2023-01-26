@@ -521,7 +521,8 @@ PrefabInstance:
       propertyPath: sm
       value: 
       objectReference: {fileID: 913194809}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4543541120387096913, guid: ed6b8674f4214e44f9e29ee61f85001f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -870,7 +871,7 @@ PrefabInstance:
     - target: {fileID: 1007693367668912756, guid: 633853d3187cb84408fdef1e11ba7065, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 9022128c49b75c14bb952624cff3cdbb, type: 3}
     - target: {fileID: 1007693367668912758, guid: 633853d3187cb84408fdef1e11ba7065, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -920,7 +921,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1007693367668912752, guid: 633853d3187cb84408fdef1e11ba7065, type: 3}
-      insertIndex: -1
+      insertIndex: 8
       addedObject: {fileID: 355812912}
   m_SourcePrefab: {fileID: 100100000, guid: 633853d3187cb84408fdef1e11ba7065, type: 3}
 --- !u!1001 &2501669770007861850
