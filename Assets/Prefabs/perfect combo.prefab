@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2501669769975380851}
   - component: {fileID: 2501669769975380850}
+  - component: {fileID: 4337617599924794517}
   m_Layer: 0
   m_Name: perfect combo
   m_TagString: Untagged
@@ -68,3 +69,15 @@ VideoPlayer:
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
+--- !u!114 &4337617599924794517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2501669769975380861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 573cfd67a3e83d04d9d2fa460830b8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

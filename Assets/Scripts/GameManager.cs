@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.Video;
+using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,14 +15,19 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI highText;
     [SerializeField] private TextMeshProUGUI Combo;
+    [SerializeField] private TextMeshProUGUI levelCompleted;
     public AudioSource killsound;
     public AudioSource perfkillsound;
+    public AudioSource meow;
     public int comboNumber = 3;
     public int currentcombo=0;
-    public GameObject combogif;
+    public VideoPlayer combogif;
     [SerializeField] int poor;
     [SerializeField] int good;
     [SerializeField] int perfect;
+    public Image scorestars;
+    public float cookiesthrown = 0.0f;
+    public int health = 5;
 
     private void Start() {
         if (FindObjectOfType<Storage>() != null) {
@@ -27,6 +35,7 @@ public class GameManager : MonoBehaviour
             highscore = storage.highscore;
         }
         UpdateHighscore();
+        Levelend();
     }
 
     void Update()
@@ -103,12 +112,44 @@ public class GameManager : MonoBehaviour
         currentcombo += 1;
         if (currentcombo == comboNumber) 
         {
-            Instantiate(combogif);
+            combogif.Play();
+            meow.Play();
             currentcombo= 0;
+            health += 1;
             
         }
         Combo.text = "Combo:" + currentcombo;
     }
 
 
+    public void cookiesshot(float x)
+    {
+        cookiesthrown += x;
+    }
+    public void Levelend()
+    {
+        float x = 0.0f;
+        x = (perfect + good / 1.5f + poor / 2.0f) / cookiesthrown;
+        //scorestars.enabled= true;
+        //scorestars.fillAmount= x;
+        
+
+
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag== "Cookie")
+        {
+            health -= 1;
+            if (health <=0) 
+            {
+                GameOver();
+            }
+        }
+    }
+    void GameOver() 
+    {
+        
+    }
 }

@@ -12,9 +12,13 @@ public class MusicManager : MonoBehaviour {
     Vector3 navStartPosition;
     float elapsedTime;
 
+    GameManager gm;
+    public float percentageComplete = 0;
+
     void Start() {
         timeline = gameObject.transform.Find("Timeline");
         nav = gameObject.transform.Find("Nav");
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         PrepareTimeline();
     }
 
@@ -25,8 +29,12 @@ public class MusicManager : MonoBehaviour {
 
         if (musicON) {
             elapsedTime += Time.deltaTime;
-            float percentageComplete = elapsedTime / musicTrackLenght;
+            percentageComplete = elapsedTime / musicTrackLenght;
             nav.transform.position = Vector3.Lerp(navStartPosition, navEndPosition, percentageComplete);
+        }
+
+        if (percentageComplete >= 1) {
+            gm.Levelend();
         }
 
     }
