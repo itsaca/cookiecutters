@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CookieLauncher : MonoBehaviour
 {
-    public GameObject cookie;
+    public GameObject[] cookies;
     public Transform cookieFolder;
     public float lowForce;
     public float highForce;
@@ -14,10 +14,12 @@ public class CookieLauncher : MonoBehaviour
     private void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        
     }
     public void ShootCookie() {
         var force = Random.Range(lowForce,highForce);
-        var instance = Instantiate(cookie, transform.position, Quaternion.identity, cookieFolder);
+        int index = Random.Range(0,cookies.Length);
+        var instance = Instantiate(cookies[index], transform.position, Quaternion.identity, cookieFolder);
         instance.GetComponent<Rigidbody2D>().AddForce(direction * force);
         gm.cookiesshot(1);
     }

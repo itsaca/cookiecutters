@@ -6,15 +6,22 @@ using UnityEngine.SceneManagement;
 public class pauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pausemenu;
+    GameManager gm;
     // Start is called before the first frame update
+    public void Start()
+    {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
     public void Pause()
     {
         pausemenu.SetActive(true);
+        gm.levelsong.Pause();
         Time.timeScale = 0.0f;
     }
     public void Resume()
     {
         pausemenu.SetActive(false);
+        gm.levelsong.UnPause();
         Time.timeScale = 1.0f;
     }
     public void Quite()
@@ -25,6 +32,6 @@ public class pauseMenu : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

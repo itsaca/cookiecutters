@@ -426,7 +426,7 @@ Transform:
   - {fileID: 5660531097418799721}
   - {fileID: 5660531097758078875}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5660531097441328204
 MonoBehaviour:
@@ -442,6 +442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicTrackLenght: 112
   musicON: 1
+  percentageComplete: 0
 --- !u!1 &5660531097758078873
 GameObject:
   m_ObjectHideFlags: 0
